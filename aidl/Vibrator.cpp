@@ -132,12 +132,12 @@ InputFFDevice::InputFFDevice()
             get_soc_info(&soc);
             ALOGD("msm CPU SoC ID: %d\n", soc.msm_cpu);
             switch (soc.msm_cpu) {
-            case MSM_CPU_LAHAINA:
-            case APQ_CPU_LAHAINA:
-            case MSM_CPU_SHIMA:
-            case MSM_CPU_SM8325:
-            case APQ_CPU_SM8325P:
-            case MSM_CPU_YUPIK:
+            case 415: // MSM_CPU_LAHAINA
+            case 439: // APQ_CPU_LAHAINA
+            case 450: // MSM_CPU_SHIMA
+            case 501: // MSM_CPU_SM8325
+            case 502: // APQ_CPU_SM8325P
+            case 475: // MSM_CPU_YUPIK
                 mSupportExternalControl = true;
                 break;
             default:
